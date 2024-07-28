@@ -1,0 +1,16 @@
+{
+  "name": "personal-blog",
+  "version": "1.0.0",
+  "description": "My personal blog prototype",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "OldestDreamKD",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}

@@ -1,0 +1,31 @@
+<%- include("header") -%>
+
+<section>
+  <div id="into" class="layout">
+    <a id="entryPublish" href="/compose">+ New</a>
+    <h1>Home</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex nihil dicta,
+      voluptatem laboriosam, quidem, saepe quod dolor veritatis exercitationem
+      repudiandae nemo tempora. Sequi accusantium quidem quos deserunt quo
+      doloribus facere voluptas. Voluptatem dolor explicabo laboriosam earum id
+      pariatur veniam accusantium quae accusamus iusto perferendis saepe, vitae
+      reiciendis ipsam labore doloremque ipsum. Explicabo quisquam natus
+      sapiente ipsa reprehenderit quam sequi repellendus error eligendi
+      molestias id enim, libero numquam nesciunt vitae et laudantium repudiandae
+      deserunt! Saepe sapiente quidem aliquid ipsam, explicabo tempora!
+    </p>
+  </div>
+  <% for(var i = 0; i< newEntry.length; i++){ %>
+  <form action="/entry" method="POST" class="entry layout">
+    <h1><%= newEntry[i].title %></h1>
+    <p>
+      <%= newEntry[i].entry %>...
+      <button type="submit" name="entryI" value=<%= newEntry[i].id %> >Read More
+      </button>
+    </p>
+  </form>
+  <% } %>
+</section>
+<%- include("footer") -%>
+

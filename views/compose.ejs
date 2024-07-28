@@ -1,0 +1,19 @@
+<%- include("header") -%>
+<div class="layout">
+  <h1>Compose</h1>
+  <form action="/compose" method="post">
+    <label for="entryTitle">Title</label>
+    <input
+      type="text"
+      name="entryTitle"
+      id="entryTitle"
+      required
+      autocomplete="off"
+    />
+    <label for="entryPost">Post</label>
+    <textarea name="entryPost" id="entryPost" required></textarea>
+    <button id="entryPublish" type="submit">Publish</button>
+  </form>
+</div>
+
+<%- include("footer") -%>
