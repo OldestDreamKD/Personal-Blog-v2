@@ -1,7 +1,9 @@
 <%- include("header") -%>
 <div class="entry layout">
-  <h1><%= newEntryF[id].title %></h1>
-  <% console.log(newEntryF[id].title); %>
-  <p><%= newEntryF[id].entry %></p>
+  <div id="component-delete">
+    <h1><%= Entry[0].title %></h1>
+    <a id="entryDelete" href="/delete/<%= Entry[0].id %>" class="material-symbols-outlined">Delete</a>
+  </div>
+  <p><%= Entry[0].entry %></p>
 </div>
 <%- include("footer") -%>
