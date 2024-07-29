@@ -1,22 +1,12 @@
 const express = require("express");
 const bodyparser = require("body-parser");
 const mongoose = require("mongoose");
-require("dotenv").config();
 
 const app = express();
 app.use(bodyparser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
-
-const mongousername = process.env.MONGO_USERNAME;
-const mongopassword = process.env.MONGO_PASSWORD;
-const url =
-  "mongodb+srv://" +
-  mongousername +
-  ":" +
-  mongopassword +
-  "@cluster0.aqlnrgj.mongodb.net/entriesDB";
-mongoose.connect(url);
+mongoose.connect("mongodb://localhost:27017/entriesDB");
 
 const entryschema = new mongoose.Schema({
   title: String,
